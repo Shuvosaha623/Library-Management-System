@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LMS" Class="DBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=LMS;Integrated Security=True" SettingsObjectName="Library_Management.Properties.Settings" SettingsPropertyName="LMSConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Login" Member="Logins">
+    <Type Name="Login">
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Role" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MR" Member="MRs">
+    <Type Name="MR">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Member Type]" Member="Member_Type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Department" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="[Contact No]" Member="Contact_No" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Blood Group]" Member="Blood_Group" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Books Type]" Member="Books_Type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Books Name]" Member="Books_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Author/Editor]" Member="Author_Editor" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Book Can Hold]" Member="Book_Can_Hold" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Issue Date]" Member="Issue_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="[Due Date]" Member="Due_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FR" Member="FRs">
+    <Type Name="FR">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Designation" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="[Contact Number]" Member="Contact_Number" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Blood Group]" Member="Blood_Group" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Books Type]" Member="Books_Type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Books Name]" Member="Books_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Author/Editor]" Member="Author_Editor" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Book Can Hold]" Member="Book_Can_Hold" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Issue Date]" Member="Issue_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="[Due Date]" Member="Due_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AB" Member="ABs">
+    <Type Name="AB">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[Book Id]" Member="Book_Id" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="[Book Name]" Member="Book_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Quantity" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

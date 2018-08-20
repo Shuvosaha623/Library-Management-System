@@ -1,0 +1,25 @@
+  DBDataContext DB = new DBDataContext();
+
+            Login w = new Login();
+            w.Username = textBox1.Text;
+            w.Password = textBox9.Text;
+            w.Role = "Student";
+            MR m = new MR();
+            m.Username = textBox1.Text;
+            m.Name = textBox2.Text;
+            m.Email = textBox3.Text;
+            m.Department = comboBox2.Text;
+            m.Address = textBox4.Text;
+            m.Contact_No = textBox5.Text;
+            m.Gender = radioButton1.Text;
+            m.Gender = radioButton2.Text;
+            m.Blood_Group = comboBox3.Text;
+            m.Books_Type = comboBox4.Text;
+            m.Books_Name = textBox6.Text;
+            m.Author_Editor = textBox7.Text;
+            m.Book_Can_Hold = textBox8.Text;
+
+
+
+
+            m.Password = textBox9.Text;

@@ -1,0 +1,13 @@
+ DBDataContext DB = new DBDataContext();
+            //int id = int.Parse(textBox3.Text);
+            string id = textBox1.Text;
+            MR s = DB.MRs.SingleOrDefault(x => x.Username == id);
+            if (s != null)
+            {
+                //textBox2.Text = s.Username;
+                textBox9.Text = s.Password;
+            }
+            else
+            {
+                MessageBox.Show("Data not found");
+            }

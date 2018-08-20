@@ -1,0 +1,14 @@
+ DBDataContext DB = new DBDataContext();
+            string id = textBox2.Text;
+            AB s = DB.ABs.SingleOrDefault(x => x.Book_Id == id);
+            if (s != null)
+            {
+              
+                s.Book_Id = textBox2.Text;
+                s.Book_Name = textBox1.Text;
+                s.Quantity = textBox3.Text;
+                DB.SubmitChanges();
+                MessageBox.Show("Information Updated!!");
+            }
+           
+            

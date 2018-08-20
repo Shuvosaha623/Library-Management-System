@@ -1,0 +1,46 @@
+ private void button2_Click(object sender, EventArgs e)
+        {
+
+            int pass = int.Parse(textBox2.Text);
+
+
+            var db = new DBDataContext();
+            Login t = null;
+            t = db.Logins.SingleOrDefault(p => p.Username == textBox1.Text && p.Password == pass );
+
+
+            if (t != null)
+            {
+                if (t.Role == "Admin")
+                {
+                    MessageBox.Show("Valid Admin");
+                    textBox1.Clear();
+                    textBox2.Clear();
+                }
+                else if (t.Role == "Faculty")
+                {
+                    MessageBox.Show("Valid faculty");
+                    textBox1.Clear();
+                    textBox2.Clear();
+                }
+
+                else 
+                {
+                    MessageBox.Show("Valid Student");
+                    textBox1.Clear();
+                    textBox2.Clear();
+                }
+
+
+
+            }
+            else
+            {
+                MessageBox.Show("Ar valo laga na ", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //error obj = new error();
+                //obj.Show();
+
+            }
+        }
+
+    }

@@ -1,0 +1,13 @@
+  //int id = int.Parse(textBox3.Text);
+            DBDataContext DB = new DBDataContext();
+            string id = textBox1.Text;
+            MR s = DB.MRs.SingleOrDefault(x => x.Username == id);
+            if (s != null)
+            {
+                DB.MRs.DeleteOnSubmit(s);
+                DB.SubmitChanges();
+            }
+            else
+            {
+                MessageBox.Show("Data not found");
+            }
